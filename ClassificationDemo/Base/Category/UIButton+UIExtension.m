@@ -48,7 +48,7 @@ static const char *UIControl_acceptEventTime = "UIControl_acceptEventTime";
 }
 
 - (void)setYt_acceptEventInterval:(NSTimeInterval)yt_acceptEventInterval {
-    objc_setAssociatedObject(self, UIControl_acceptEventInterval, @(yt_acceptEventInterval), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &UIControl_acceptEventInterval, @(yt_acceptEventInterval), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (NSTimeInterval)yt_acceptEventTime {
@@ -56,7 +56,7 @@ static const char *UIControl_acceptEventTime = "UIControl_acceptEventTime";
 }
 
 - (void)setYt_acceptEventTime:(NSTimeInterval)yt_acceptEventTime {
-    objc_setAssociatedObject(self, UIControl_acceptEventTime, @(yt_acceptEventTime), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &UIControl_acceptEventTime, @(yt_acceptEventTime), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (void)yt_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
