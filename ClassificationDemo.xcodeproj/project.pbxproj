@@ -27,6 +27,10 @@
 		AE346619202C4C810012220A /* UITextField+UIExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AE346600202C4C810012220A /* UITextField+UIExtension.m */; };
 		AE34661A202C4C810012220A /* YTUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AE346606202C4C810012220A /* YTUIHelper.m */; };
 		AE34661B202C4C810012220A /* UIConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AE346607202C4C810012220A /* UIConfiguration.m */; };
+		AEB347B120EDBC7A00E91B6B /* NSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB347B020EDBC7A00E91B6B /* NSArrayTests.m */; };
+		AEB347B420EDBDC900E91B6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB347B320EDBDC900E91B6B /* UIKit.framework */; };
+		AEB347B620EDBDE300E91B6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB347B520EDBDE300E91B6B /* Foundation.framework */; };
+		AEB347B820EDBDFC00E91B6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB347B720EDBDFB00E91B6B /* CoreGraphics.framework */; };
 		AED0ED581FC905AD008CAD96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0ED571FC905AD008CAD96 /* AppDelegate.m */; };
 		AED0ED5B1FC905AD008CAD96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0ED5A1FC905AD008CAD96 /* ViewController.m */; };
 		AED0ED5E1FC905AD008CAD96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED0ED5C1FC905AD008CAD96 /* Main.storyboard */; };
@@ -91,12 +95,16 @@
 		AE3465FE202C4C810012220A /* UILabel+UIExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+UIExtension.h"; sourceTree = "<group>"; };
 		AE3465FF202C4C810012220A /* UIImageView+UIExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIExtension.m"; sourceTree = "<group>"; };
 		AE346600202C4C810012220A /* UITextField+UIExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UIExtension.m"; sourceTree = "<group>"; };
-		AE346601202C4C810012220A /* PublicSystemDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicSystemDefine.h; sourceTree = "<group>"; };
-		AE346602202C4C810012220A /* UICore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICore.h; sourceTree = "<group>"; };
 		AE346604202C4C810012220A /* YTUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTUIHelper.h; sourceTree = "<group>"; };
 		AE346605202C4C810012220A /* UIConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIConfiguration.h; sourceTree = "<group>"; };
 		AE346606202C4C810012220A /* YTUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTUIHelper.m; sourceTree = "<group>"; };
 		AE346607202C4C810012220A /* UIConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIConfiguration.m; sourceTree = "<group>"; };
+		AEB347B020EDBC7A00E91B6B /* NSArrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSArrayTests.m; sourceTree = "<group>"; };
+		AEB347B320EDBDC900E91B6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AEB347B520EDBDE300E91B6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AEB347B720EDBDFB00E91B6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AEB347B920EDBE8200E91B6B /* PublicSystemDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicSystemDefine.h; sourceTree = "<group>"; };
+		AEB347BA20EDBE8200E91B6B /* UICore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICore.h; sourceTree = "<group>"; };
 		AED0ED531FC905AD008CAD96 /* ClassificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED0ED561FC905AD008CAD96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AED0ED571FC905AD008CAD96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +129,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB347B820EDBDFC00E91B6B /* CoreGraphics.framework in Frameworks */,
+				AEB347B620EDBDE300E91B6B /* Foundation.framework in Frameworks */,
+				AEB347B420EDBDC900E91B6B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,9 +155,9 @@
 		AE3465DB202C4C800012220A /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				AEB347B920EDBE8200E91B6B /* PublicSystemDefine.h */,
+				AEB347BA20EDBE8200E91B6B /* UICore.h */,
 				AE3465DC202C4C800012220A /* Category */,
-				AE346601202C4C810012220A /* PublicSystemDefine.h */,
-				AE346602202C4C810012220A /* UICore.h */,
 				AE346603202C4C810012220A /* UICore */,
 			);
 			path = Base;
@@ -200,10 +211,20 @@
 			children = (
 				AE346604202C4C810012220A /* YTUIHelper.h */,
 				AE346605202C4C810012220A /* UIConfiguration.h */,
-				AE346606202C4C810012220A /* YTUIHelper.m */,
 				AE346607202C4C810012220A /* UIConfiguration.m */,
+				AE346606202C4C810012220A /* YTUIHelper.m */,
 			);
 			path = UICore;
+			sourceTree = "<group>";
+		};
+		AEB347B220EDBDC800E91B6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEB347B720EDBDFB00E91B6B /* CoreGraphics.framework */,
+				AEB347B520EDBDE300E91B6B /* Foundation.framework */,
+				AEB347B320EDBDC900E91B6B /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AED0ED4A1FC905AD008CAD96 = {
@@ -213,6 +234,7 @@
 				AED0ED6E1FC905AD008CAD96 /* ClassificationDemoTests */,
 				AED0ED791FC905AD008CAD96 /* ClassificationDemoUITests */,
 				AED0ED541FC905AD008CAD96 /* Products */,
+				AEB347B220EDBDC800E91B6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				AED0ED6F1FC905AD008CAD96 /* ClassificationDemoTests.m */,
+				AEB347B020EDBC7A00E91B6B /* NSArrayTests.m */,
 				AED0ED711FC905AD008CAD96 /* Info.plist */,
 			);
 			path = ClassificationDemoTests;
@@ -425,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB347B120EDBC7A00E91B6B /* NSArrayTests.m in Sources */,
 				AED0ED701FC905AD008CAD96 /* ClassificationDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

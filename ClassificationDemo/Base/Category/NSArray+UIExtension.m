@@ -24,6 +24,35 @@
     
     return josnString;
 }
+
+- (void)enumerateObjectsUsingAnsyBlock:(void (^)(id _Nonnull, NSUInteger))block {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSInteger index = 0;
+        for (id subObject in self) {
+            block(subObject,index);
+            index ++;
+        }
+    });
+}
+
+- (NSArray <id>*)enumerateObjectsUsingAnsyParsingBlock:(id(^)(id _Nonnull,NSUInteger))block{
+    __block NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:5];
+    __block dispatch_semaphore_t semaphore_t = dispatch_semaphore_create(0);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSInteger index = 0;
+        for (id subObject in self) {
+            [arrayM addObject:block(subObject,index)];
+            index ++;
+        }
+        dispatch_semaphore_signal(semaphore_t);
+    });
+   	dispatch_semaphore_wait(semaphore_t, DISPATCH_TIME_FOREVER);
+
+    return arrayM;
+
+}
+
+
 + (NSArray *)arrayWithData:(NSData *)jsonData{
     if (jsonData == nil) {
         return nil;
@@ -64,13 +93,14 @@
 - (void)prependObject:(NSArray *)objects{
     if (!objects) return;
     [self insertObjects:objects atIndex:0];
+ 
 }
 
 - (void)insertObjects:(NSArray *)objects atIndex:(NSUInteger)index {
-    NSUInteger i = index;
-    for (id obj in objects) {
-        [self insertObject:obj atIndex:i++];
-    }
+    __block NSInteger i = index;
+    [objects enumerateObjectsUsingAnsyBlock:^(id _Nonnull objc, NSUInteger j) {
+        [self insertObject:objc atIndex:i++];
+    }];    
 }
 
 

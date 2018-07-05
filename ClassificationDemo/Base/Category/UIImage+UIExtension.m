@@ -541,8 +541,8 @@ static NSTimeInterval CGImageSourceGetGIFFrameDelayAtIndex(CGImageSourceRef sour
 + (UIImage *)yt_imageSizeWithScreenImage:(UIImage *)image {
     CGFloat imageWidth = image.size.width;
     CGFloat imageHeight = image.size.height;
-    CGFloat screenWidth = [Util mainScreenWidth];
-    CGFloat screenHeight = [Util mainScreenHegiht];
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     
     if (imageWidth <= screenWidth && imageHeight <= screenHeight) {
         return image;
