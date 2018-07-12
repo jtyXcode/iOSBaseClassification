@@ -110,6 +110,7 @@
 
 
 @implementation NSObject (yt_windows)
+
 + (UIWindow *)lastWindow {
     NSArray *windows = [UIApplication sharedApplication].windows;
     for (UIWindow *window in [windows reverseObjectEnumerator]) {

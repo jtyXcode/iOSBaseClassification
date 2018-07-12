@@ -27,6 +27,13 @@
  @return 
  */
 - (BOOL)copyStr;
+
+/**
+ 字符串反转
+
+ @return 反转后的字符串
+ */
+- (NSString *)reverseString;
 //- (CGRect)sizeToBounds;
 + (NSString *)fileSizeWithInterge:(NSInteger)size;
 

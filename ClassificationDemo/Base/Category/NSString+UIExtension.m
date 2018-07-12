@@ -94,6 +94,30 @@
     return [NSObject md5:self];
 }
 
+- (nullable NSString *)reverseString {
+    
+    return @"";
+//    const char * cStr = [self cStringUsingEncoding:NSUTF8StringEncoding];
+//    unsigned long len = strlen(&cStr);
+//    char *res = cStr;
+//    char *start = res;
+//    char *end = start + len - 1;
+//
+//
+//    if (res != NULL) {
+//        while (start < end) {
+//
+//            char t = *start;
+//            *start = *end;
+//            *end = t;
+//            ++start;
+//            --end;
+//        }
+//    }
+//
+//    return [NSString stringWithUTF8String:&res];
+}
+
 + (NSString *)fileSizeWithInterge:(NSInteger)size{
     // 1k = 1024, 1m = 1024k
     if (size < 1024) {// 小于1k
